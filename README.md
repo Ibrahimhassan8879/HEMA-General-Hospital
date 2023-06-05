@@ -39,10 +39,12 @@ I've utilized the csv library to export CSV sheets for the accountant to review 
 - Print tickets for patients after they have made their doctor reservation purchase.
 - Review late reservations made by patients who did not attend their reservation within 8 days to check their health status and their intention to renew or cancel their reservation.
 - Reset the doctor reservation queue every week, starting the queue number from 1 again.
+- Write and view sent and received messages with all staff accounts.
 
 ### 3. Nurses
 
 - Check reservations of doctor clinics for patients who attend their reservations.
+- Write and view sent and received messages with all staff accounts.
 
 ### 4. Accountants
 
@@ -54,6 +56,7 @@ I've utilized the csv library to export CSV sheets for the accountant to review 
 - Generate bar and pie charts for the evaluation.
 - Save the generated tables, charts as CSV files, and pictures.
 - Undo the check-in for reservations that were mistakenly checked by the nurse.
+- Write and view sent and received messages with all staff accounts.
 
 ### 5. Admins
 
@@ -64,7 +67,8 @@ I've utilized the csv library to export CSV sheets for the accountant to review 
 - Modify specialties by adding or removing specialties.
 - Modify basic website data in the header and footer (Phone number, Address, Email, Facebook page, Twitter page, Instagram page, and Linkedin page).
 - Issue refunds for reviewed reservations if the client is dissatisfied with the services.
-- Delete patient accounts due to inactivity or spam
+- Delete patient accounts due to inactivity or spam.
+- Write and view sent and received messages with all staff accounts.
 
 ### 6. Developer
 
