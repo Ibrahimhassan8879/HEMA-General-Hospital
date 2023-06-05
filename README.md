@@ -7,7 +7,6 @@
 
 ## Features
 
-```python
 - [Flask-qrCode](https://pypi.org/project/qrcode/)
 - [Python-matplotlib](https://www.w3schools.com/python/matplotlib_pyplot.asp)
 - [Python-csv](https://docs.python.org/3/library/csv.html)
