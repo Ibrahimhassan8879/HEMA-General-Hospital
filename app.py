@@ -57,9 +57,6 @@ def before_each_request():
     # Update the accounts before each request
     update_accounts()
 
-#Location Deployment
-Files_location_path = Get_file_location()
-
 #Specify the folder
 UPLOAD_FOLDER = "/static/Doctors_photos/"
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
