@@ -61,7 +61,7 @@ def before_each_request():
 Files_location_path = Get_file_location()
 
 #Specify the folder
-UPLOAD_FOLDER = f"{Files_location_path}3-Final_Project/hospital/static/Doctors_photos/"
+UPLOAD_FOLDER = "/static/Doctors_photos/"
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024
 ALLOWED_EXTENSIONS = {'jpg', 'jpeg', 'gif','jfif','bmp'}
@@ -969,7 +969,7 @@ def reviewed_reservations():
     Accountant_name = db.execute("SELECT * FROM users WHERE id = ?",session['user_id'])[0]['username']
 
     # Making csv file
-    csv_file_save_location = f'{Files_location_path}3-Final_Project/hospital/csv_files/ Reviewed Reservations Accountant name {Accountant_name} Date-{timestamp}.csv'
+    csv_file_save_location = '/csv_files/ Reviewed Reservations Accountant name {Accountant_name} Date-{timestamp}.csv'
     with open(csv_file_save_location, 'w', encoding='UTF8', newline='') as f:
         writer = csv.writer(f)
         writer.writerow(header)
@@ -1022,7 +1022,7 @@ def Doctors_evaluation():
     Accountant_name = db.execute("SELECT username FROM users WHERE id = ?",session['user_id'])[0]['username']
 
     # Define location of new csv
-    csv_save_location = f'{Files_location_path}3-Final_Project/hospital/csv_files/Doctors Evaluation Accountant name {Accountant_name} Date-{timestamp}.csv'
+    csv_save_location = 'csv_files/Doctors Evaluation Accountant name {Accountant_name} Date-{timestamp}.csv'
 
     # Make csv file for the Evaluation table
     with open(csv_save_location, 'w', encoding='UTF8', newline='') as f:
@@ -1043,7 +1043,7 @@ def Doctors_evaluation():
     ax.legend()
 
     # Define the save location for the graphs
-    save_location = f'{Files_location_path}3-Final_Project/hospital/Graphs/'
+    save_location = '/hospital/Graphs/'
 
     # Save the bar graph to a file
     bar_graph_file = 'bar_graph.png'
@@ -1383,7 +1383,7 @@ def get_ticket():
     draw.rectangle([(0, 0), (ticket_size[0] - 1, ticket_size[1] - 1)], outline=border_color, width=border_width)
 
     # Load the source image
-    source_image = Image.open(f'{Files_location_path}3-Final_Project/hospital/static/Logo-final_300-200.png')
+    source_image = Image.open('/static/Logo-final_300-200.png')
     x = 50
     y = 5
 
@@ -1393,7 +1393,7 @@ def get_ticket():
 
     # Set the desired font and text size
     font_size = 16
-    font = ImageFont.truetype(f"{Files_location_path}3-Final_Project/hospital/static/arial.ttf", font_size)
+    font = ImageFont.truetype("/static/arial.ttf", font_size)
 
     # Draw the reservation data 1 on the image
     text_y = 225
@@ -1429,12 +1429,12 @@ def get_ticket():
     if session['user_id'] in Receptionist_accounts:
 
         #save the image to a file folder receptionist tickets
-        image_path = f"{Files_location_path}3-Final_Project/hospital/Tickets/Tickets_receptionist/reservation_ticket_Receptionist_name_{receptionist_name}_Reservation_ID_{patient_reservation_id}_Time_stamp_{patient_reservation_timestamp}.png"
+        image_path = "/Tickets/Tickets_receptionist/reservation_ticket_Receptionist_name_{receptionist_name}_Reservation_ID_{patient_reservation_id}_Time_stamp_{patient_reservation_timestamp}.png"
         ticket_image.save(image_path, format='PNG')
 
     else:
         # Save the image to a file for users in tickets
-        image_path = f"{Files_location_path}3-Final_Project/hospital/Tickets/Users/reservation_ticket_Reservation_ID_{patient_reservation_id}_Time_stamp_{patient_reservation_timestamp}.png"
+        image_path = "/Tickets/Users/reservation_ticket_Reservation_ID_{patient_reservation_id}_Time_stamp_{patient_reservation_timestamp}.png"
         ticket_image.save(image_path, format='PNG')
 
         # Convert the image to a base64-encoded string
