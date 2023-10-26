@@ -23,12 +23,6 @@ from werkzeug.utils import secure_filename
 # Configure application
 app = Flask(__name__, template_folder="docs")
 
-app.config['DEBUG'] = True
-
-# Bind the app to all interfaces
-app.run(host='0.0.0.0', port=5000)
-
-
 # Configure session to use filesystem (instead of signed cookies)
 app.config['SESSION_COOKIE_NAME'] = 'your_cookie_name'
 app.config["SESSION_PERMANENT"] = False
