@@ -1426,12 +1426,12 @@ def get_ticket():
     if session['user_id'] in Receptionist_accounts:
 
         #save the image to a file folder receptionist tickets
-        image_path = "static/Tickets/Tickets_receptionist/reservation_ticket_Receptionist_name_{receptionist_name}_Reservation_ID_{patient_reservation_id}_Time_stamp_{patient_reservation_timestamp}.png"
+        image_path = "static/Doctors_photos/reservation_ticket_Receptionist_name_{receptionist_name}_Reservation_ID_{patient_reservation_id}_Time_stamp_{patient_reservation_timestamp}.png"
         ticket_image.save(image_path, format='PNG')
 
     else:
         # Save the image to a file for users in tickets
-        image_path = "static/Tickets/Users/reservation_ticket_Reservation_ID_{patient_reservation_id}_Time_stamp_{patient_reservation_timestamp}.png"
+        image_path = "static/Doctors_photos/reservation_ticket_Reservation_ID_{patient_reservation_id}_Time_stamp_{patient_reservation_timestamp}.png"
         ticket_image.save(image_path, format='PNG')
 
         # Convert the image to a base64-encoded string
