@@ -13,7 +13,7 @@ import io
 import base64
 from PIL import Image, ImageDraw, ImageFont
 from flask import send_file
-from Functions import check_variable_if_exists, Check_existing_variable_on_table, Check_password_identically, Get_account_id_from_staff_by_Type, Get_account_id_from_users_by_Type, Get_account_id_from_admin_by_Type, Get_file_location
+from Functions import check_variable_if_exists, Check_existing_variable_on_table, Check_password_identically, Get_account_id_from_staff_by_Type, Get_account_id_from_users_by_Type, Get_account_id_from_admin_by_Type
 import subprocess
 import matplotlib.pyplot as plt
 import numpy as np
