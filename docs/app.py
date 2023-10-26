@@ -966,7 +966,7 @@ def reviewed_reservations():
     Accountant_name = db.execute("SELECT * FROM users WHERE id = ?",session['user_id'])[0]['username']
 
     # Making csv file
-    csv_file_save_location = 'csv_files/ Reviewed Reservations Accountant name {Accountant_name} Date-{timestamp}.csv'
+    csv_file_save_location = 'static/csv_files/ Reviewed Reservations Accountant name {Accountant_name} Date-{timestamp}.csv'
     with open(csv_file_save_location, 'w', encoding='UTF8', newline='') as f:
         writer = csv.writer(f)
         writer.writerow(header)
@@ -1019,7 +1019,7 @@ def Doctors_evaluation():
     Accountant_name = db.execute("SELECT username FROM users WHERE id = ?",session['user_id'])[0]['username']
 
     # Define location of new csv
-    csv_save_location = 'csv_files/Doctors Evaluation Accountant name {Accountant_name} Date-{timestamp}.csv'
+    csv_save_location = 'static/csv_files/Doctors Evaluation Accountant name {Accountant_name} Date-{timestamp}.csv'
 
     # Make csv file for the Evaluation table
     with open(csv_save_location, 'w', encoding='UTF8', newline='') as f:
@@ -1040,7 +1040,7 @@ def Doctors_evaluation():
     ax.legend()
 
     # Define the save location for the graphs
-    save_location = 'Graphs/'
+    save_location = 'static/Graphs/'
 
     # Save the bar graph to a file
     bar_graph_file = 'bar_graph.png'
@@ -1426,12 +1426,12 @@ def get_ticket():
     if session['user_id'] in Receptionist_accounts:
 
         #save the image to a file folder receptionist tickets
-        image_path = "Tickets/Tickets_receptionist/reservation_ticket_Receptionist_name_{receptionist_name}_Reservation_ID_{patient_reservation_id}_Time_stamp_{patient_reservation_timestamp}.png"
+        image_path = "static/Tickets/Tickets_receptionist/reservation_ticket_Receptionist_name_{receptionist_name}_Reservation_ID_{patient_reservation_id}_Time_stamp_{patient_reservation_timestamp}.png"
         ticket_image.save(image_path, format='PNG')
 
     else:
         # Save the image to a file for users in tickets
-        image_path = "Tickets/Users/reservation_ticket_Reservation_ID_{patient_reservation_id}_Time_stamp_{patient_reservation_timestamp}.png"
+        image_path = "static/Tickets/Users/reservation_ticket_Reservation_ID_{patient_reservation_id}_Time_stamp_{patient_reservation_timestamp}.png"
         ticket_image.save(image_path, format='PNG')
 
         # Convert the image to a base64-encoded string
