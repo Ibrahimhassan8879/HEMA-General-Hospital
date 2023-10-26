@@ -28,8 +28,6 @@ app.config['DEBUG'] = True
 # Bind the app to all interfaces
 app.run(host='0.0.0.0', port=5000)
 
-if __name__ == "__main__":
-    app.run()
 
 # Configure session to use filesystem (instead of signed cookies)
 app.config['SESSION_COOKIE_NAME'] = 'your_cookie_name'
