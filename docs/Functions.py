@@ -84,4 +84,4 @@ def Get_account_id_from_users_by_Type(TYPE):
     Quota_loaded = sqlite3.connect('Database.db').execute("SELECT Quota_users_number FROM Quota WHERE Quota_loaded = ?",("Loaded",)).fetchall()[0]
     rows = sqlite3.connect('Database.db').execute(f"SELECT id FROM users WHERE TYPE = ? LIMIT {Quota_loaded[0]}",(TYPE,)).fetchall()
     output = [ row[0] for row in rows]
-        return output
+    return output
