@@ -1,7 +1,7 @@
 cs50==9.3.0
 Flask==2.2.5
 Flask-Session==0.4.0
-Werkzeug==2.1.0
+Werkzeug==2.2.2
 Pillow==9.2.0
 pytz==2023.3
 qrcode==7.3
