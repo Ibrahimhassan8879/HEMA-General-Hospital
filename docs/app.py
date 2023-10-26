@@ -966,7 +966,7 @@ def reviewed_reservations():
     Accountant_name = db.execute("SELECT * FROM users WHERE id = ?",session['user_id'])[0]['username']
 
     # Making csv file
-    csv_file_save_location = 'static/csv_files/ Reviewed Reservations Accountant name {Accountant_name} Date-{timestamp}.csv'
+    csv_file_save_location = 'static/Doctors_photos/ Reviewed Reservations Accountant name {Accountant_name} Date-{timestamp}.csv'
     with open(csv_file_save_location, 'w', encoding='UTF8', newline='') as f:
         writer = csv.writer(f)
         writer.writerow(header)
@@ -1019,7 +1019,7 @@ def Doctors_evaluation():
     Accountant_name = db.execute("SELECT username FROM users WHERE id = ?",session['user_id'])[0]['username']
 
     # Define location of new csv
-    csv_save_location = 'static/csv_files/Doctors Evaluation Accountant name {Accountant_name} Date-{timestamp}.csv'
+    csv_save_location = 'static/Doctors_photos/Doctors Evaluation Accountant name {Accountant_name} Date-{timestamp}.csv'
 
     # Make csv file for the Evaluation table
     with open(csv_save_location, 'w', encoding='UTF8', newline='') as f:
@@ -1040,7 +1040,7 @@ def Doctors_evaluation():
     ax.legend()
 
     # Define the save location for the graphs
-    save_location = 'static/Graphs/'
+    save_location = 'static/Doctors_photos/'
 
     # Save the bar graph to a file
     bar_graph_file = 'bar_graph.png'
