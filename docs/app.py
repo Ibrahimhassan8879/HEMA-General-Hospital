@@ -21,7 +21,7 @@ import csv
 from werkzeug.utils import secure_filename
 
 # Configure application
-app = Flask(__name__, template_folder="docs")
+app = Flask(__name__)
 
 # Configure session to use filesystem (instead of signed cookies)
 app.config['SESSION_COOKIE_NAME'] = 'your_cookie_name'
