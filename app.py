@@ -24,7 +24,7 @@ from werkzeug.utils import secure_filename
 app = Flask(__name__, template_folder="docs")
 
 # Bind the app to all interfaces
-app.run(host='0.0.0.0')
+app.run(host='0.0.0.0', port=5000)
 
 if __name__ == "__main__":
     app.run()
