@@ -1390,7 +1390,7 @@ def get_ticket():
 
     # Set the desired font and text size
     font_size = 16
-    font = ImageFont.truetype("/static/arial.ttf", font_size)
+    font = ImageFont.truetype("static/arial.ttf", font_size)
 
     # Draw the reservation data 1 on the image
     text_y = 225
