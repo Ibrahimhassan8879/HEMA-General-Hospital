@@ -1,4 +1,4 @@
-Flask==2.3.2
+Flask==2.2.5
 cs50==2.10.0
 Flask-Session==0.4.0
 Werkzeug==2.3.3
